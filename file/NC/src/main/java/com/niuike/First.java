@@ -14,16 +14,16 @@ public class First {
         System.out.println(a);
     }
     public static String reverse(String str){
+        // 数组中
         char[] s = str.toCharArray();
-        int left = 0;
-        int right = s.length-1;
-        while(left < right){
-            char c = s[left];
-            s[left] = s[right];
-            s[right] = c ;
-            left++;
-            right--;
+        int i = 0;
+        int j = s.length -1 ;
+        for( i = 0  , j = s.length -1  ; i < j ; i++ ,j--){
+            char a = s[i] ;
+            s[i] = s[j] ;
+            s[j] = a ;
         }
-        return  new String(s);
+
+        return new String(s) ;
     }
 }
